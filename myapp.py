@@ -16,8 +16,8 @@ else:
     print("Usage: %s username" % (sys.argv[0],))
     sys.exit()
 
-CLIENT_ID = '785022fabf2743b4807db31fbe776aee'
-CLIENT_SECRET = 'ee19b7c6cb514ec1a9b45c95a51b665d'
+CLIENT_ID = 'YOUR CLIENT ID'
+CLIENT_SECRET = 'YOUR CLIENT SECRET'
 REDIRECT_URI = 'http://localhost:8888/callback'
 
 token = util.prompt_for_user_token(username, scope, CLIENT_ID, CLIENT_SECRET, REDIRECT_URI)
@@ -31,7 +31,7 @@ if token:
 
     api_service_name = 'youtube'
     api_version = 'v3'
-    client_secrets_file = r"C:\Users\Администратор\Desktop\client_secret_124567005092-8sjca4fs0uvte6btmrr8a07oa9771jpm.apps.googleusercontent.com.json"
+    client_secrets_file = r"PATH TO JSON FILE"
 
     flow = google_auth_oauthlib.flow.InstalledAppFlow.from_client_secrets_file(client_secrets_file, scopes)
     credentials = flow.run_console()
@@ -40,7 +40,7 @@ if token:
     request = youtube.playlistItems().list(
         part="snippet,contentDetails",
         maxResults=25,
-        playlistId='PLKfBEGKklgdM6oLrdUtao1qwzsqHgRAI7'
+        playlistId='ID OF PLAYLIST'
     )
     response = request.execute()
 
