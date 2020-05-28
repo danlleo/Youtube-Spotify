@@ -2,7 +2,6 @@ import os
 import sys
 import spotipy
 import spotipy.util as util
-
 import google_auth_oauthlib.flow
 import googleapiclient.discovery
 import googleapiclient.errors
