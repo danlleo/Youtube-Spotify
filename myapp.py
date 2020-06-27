@@ -4,7 +4,7 @@ import spotipy
 import spotipy.util as util
 import google_auth_oauthlib.flow
 import googleapiclient.discovery
-import googleapiclient.errors # ice
+import googleapiclient.errors
 
 scope = 'user-library-read user-library-modify user-read-playback-state playlist-read-private playlist-modify-private' # Spotify Scopes
 scopes = ['https://www.googleapis.com/auth/youtube.readonly'] # YouTube Scopes
